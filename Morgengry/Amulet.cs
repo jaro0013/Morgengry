@@ -7,16 +7,26 @@ using System.Threading.Tasks;
 namespace Morgengry
 {
     public enum Level { low, medium, high };
-    public class Amulet
+    public class Amulet : Merchandise
     {
-        string ItemID { get; set; }
-        string Design { get; set; }
+        //string ItemID { get; set; }
+        private string design;
+        private Level quality;
+         public string Design
+        {
+            get { return design; }
+            set { design = value; }
+        }
 
-        Level Quality { get; set; }
+        public Level Quality
+        {
+            get { return quality; }
+            set { quality = value; }
+        }
 
 
 
-        
+
         public Amulet(string itemID):
             this(itemID, Level.medium, "")
         {
@@ -32,16 +42,16 @@ namespace Morgengry
         
         }
 
-        public Amulet (string itemID,Level quality,string design)
+        public Amulet(string itemID,Level quality,string design):base(itemID)
         {
-            this.ItemID = itemID;
-            this.Quality = quality;
-            this.Design = design;
+            ItemId = itemID;
+            Quality = quality;
+            Design = design;
         }
         
         public string ToString()
         {
-            return "ItemId: " + ItemID + ", " + "Quality: " + Quality + ", " + "Design: " + Design;
+            return "ItemId: " + ItemId + ", " + "Quality: " + Quality + ", " + "Design: " + Design;
         }
 
     }
