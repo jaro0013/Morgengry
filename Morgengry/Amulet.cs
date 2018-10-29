@@ -24,7 +24,7 @@ namespace Morgengry
             set { quality = value; }
         }
 
-
+        
 
 
         public Amulet(string itemID):
