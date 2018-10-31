@@ -12,6 +12,7 @@ namespace Morgengry
         public void AddMerchandise(Merchandise merchandise)
         {
             merchandises.Add(merchandise);
+            merchandises.Add(merchandise);
         }
         public Merchandise GetMerchandise(string itemId)
         {
@@ -20,10 +21,10 @@ namespace Morgengry
 
         public double GetTotalValue()
         {
-            double allMerchandise = 0;
+            double allMerchandises = 0;
             foreach (Merchandise m in merchandises)
             {
-                allMerchandises = Utility.GetValueOfMerchandise;
+                allMerchandises = Utility.GetValueOfMerchandise(m);
             }
 
             return allMerchandises;

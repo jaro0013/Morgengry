@@ -25,10 +25,12 @@ namespace Morgengry
             double allAmulets = 0;
             foreach (Amulet a in amulets)
             {
-              allAmulets = allAmulets + Utility.GetValueOfAmulet(a);
+                allAmulets = allAmulets + Utility.GetValueOfMerchandise(a);
 
-                
-               // allAmulets += a.Quality;
+                //allAmulets = allAmulets + Utility.GetValueOfAmulet(a);
+
+
+                // allAmulets += a.Quality;
             }
 
             return allAmulets;

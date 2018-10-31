@@ -50,20 +50,28 @@ namespace UnitTest2
         [TestMethod]
         public void TestGetValueForBook()
         {
-           
-            Assert.AreEqual(0.0, Utility.GetValueOfBook(b1));
+            Assert.AreEqual(0.0, Utility.GetValueOfMerchandise(b1));
+            Assert.AreEqual(0.0, Utility.GetValueOfMerchandise(b2));
+            Assert.AreEqual(123.55, Utility.GetValueOfMerchandise(b3));
+
+
+            /*Assert.AreEqual(0.0, Utility.GetValueOfBook(b1));
             Assert.AreEqual(0.0, Utility.GetValueOfBook(b2));
-            Assert.AreEqual(123.55, Utility.GetValueOfBook(b3));
+            Assert.AreEqual(123.55, Utility.GetValueOfBook(b3));*/
             Assert.AreEqual(123.55, books.GetTotalValue());
         }
 
         [TestMethod]
         public void TestGetValueForAmulet()
         {
-            
-            Assert.AreEqual(20.0, Utility.GetValueOfAmulet(a11));
+
+            Assert.AreEqual(20.0, Utility.GetValueOfMerchandise(a11));
+            Assert.AreEqual(27.5, Utility.GetValueOfMerchandise(a12));
+            Assert.AreEqual(12.5, Utility.GetValueOfMerchandise(a13));
+
+            /*Assert.AreEqual(20.0, Utility.GetValueOfAmulet(a11));
             Assert.AreEqual(27.5, Utility.GetValueOfAmulet(a12));
-            Assert.AreEqual(12.5, Utility.GetValueOfAmulet(a13));
+            Assert.AreEqual(12.5, Utility.GetValueOfAmulet(a13));*/
             Assert.AreEqual(60.0, amulets.GetTotalValue());
         }
 

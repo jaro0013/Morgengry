@@ -26,16 +26,20 @@ namespace Morgengry
 
             if (merchandise is Amulet amulet) 
             {
-                if (amulet.Quality == Level.low) {
+                if (amulet.Quality == Level.low)
+                {
                     value = 12.5;
                 }
-                else if (amulet.Quality == Level.high) {
+                else if (amulet.Quality == Level.high)
+                {
                     value = 27.5;
                 }
-                else {
+                else 
+                {
                     value = 20.0;
                 }
             }
+
             return value;
         }
 
