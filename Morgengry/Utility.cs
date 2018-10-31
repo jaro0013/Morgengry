@@ -15,7 +15,13 @@ namespace Morgengry
 
         static public double GetValueOfMerchandise(Merchandise merchandise)
         {
-            return merchandise.Price;
+            double value = 0;
+
+            if (merchandise is Book book) 
+            {
+                value = book.Price;
+            }
+            return value;
         }
 
 
