@@ -8,7 +8,18 @@ namespace Morgengry
 {
     public class Utility
     {
-        static public double GetValueOfBook(Book book)
+        static public double LowQualityValue;
+        static public double MediumQualityValue;
+        static public double HighQualityValue;
+        static public double CourseHourValue;
+
+        static public double GetValueOfMerchandise(Merchandise merchandise)
+        {
+            return merchandise.Price;
+        }
+
+
+        /*static public double GetValueOfBook(Book book)
         {
             return book.Price;
         }
@@ -27,7 +38,7 @@ namespace Morgengry
             {
                 return 20.0;
             }
-        }
+        }*/
 
         static public double GetValueOfCourse(Course course)
         {
