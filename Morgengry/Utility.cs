@@ -22,8 +22,24 @@ namespace Morgengry
             {
                 value = book.Price;
             }
+           
+
+            if (merchandise is Amulet amulet) 
+            {
+                if (amulet.Quality == Level.low) {
+                    value = 12.5;
+                }
+                else if (amulet.Quality == Level.high) {
+                    value = 27.5;
+                }
+                else {
+                    value = 20.0;
+                }
+            }
             return value;
         }
+
+    
 
 
         /*static public double GetValueOfBook(Book book)
