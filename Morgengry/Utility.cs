@@ -16,6 +16,7 @@ namespace Morgengry
         static public double GetValueOfMerchandise(Merchandise merchandise)
         {
             double value = 0;
+            //det virker!
 
             if (merchandise is Book book)
             {
