@@ -17,7 +17,7 @@ namespace Morgengry
         {
             double value = 0;
 
-            if (merchandise is Book book) 
+            if (merchandise is Book book)
             {
                 value = book.Price;
             }

@@ -23,7 +23,7 @@ namespace Morgengry
             double allMerchandise = 0;
             foreach (Merchandise m in merchandises)
             {
-                allMerchandises += m.Price;
+                allMerchandises = Utility.GetValueOfMerchandise;
             }
 
             return allMerchandises;
