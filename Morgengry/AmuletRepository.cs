@@ -20,11 +20,14 @@ namespace Morgengry
             return amulets.Find(x => x.ItemId == itemId);
         }
 
-        public Level GetTotalValue()
+        public double GetTotalValue()
         {
-            Level allAmulets = 0;
+            double allAmulets = 0;
             foreach (Amulet a in amulets)
             {
+              allAmulets = allAmulets + Utility.GetValueOfAmulet(a);
+
+                
                // allAmulets += a.Quality;
             }
 

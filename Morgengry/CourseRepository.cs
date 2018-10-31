@@ -23,7 +23,8 @@ namespace Morgengry
             double allCourse = 0;
             foreach (Course c in courses)
             {
-                allCourse += c.DurationInMinutes;
+               allCourse = Utility.GetValueOfCourse(c);
+               // allCourse += c.DurationInMinutes;
             }
 
             return allCourse;
