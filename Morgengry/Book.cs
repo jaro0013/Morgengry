@@ -34,7 +34,7 @@ namespace Morgengry
             //this.title = title;
         }
 
-        public Book(string itemID, string title,double price):base(itemID)
+        public Book(string itemID, string title,double price)
         {
             ItemId = itemID;
             Title = title;
@@ -46,6 +46,10 @@ namespace Morgengry
             return "ItemId: " + ItemId + ", " + "Title: " + Title + ", " + "Price: " + Price;
         }
 
+        public override double GetValue()
+        {
+            return Price;
+        }
     }
 
     

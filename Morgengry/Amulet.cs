@@ -13,9 +13,9 @@ namespace Morgengry
         //string ItemID { get; set; }
         private string design;
         private Level quality;
-        private double lowQualityValue;
-        private double mediumQualityValue;
-        private double highQualityValue;
+        private double lowQualityValue = 12.5;
+        private double mediumQualityValue = 20.0;
+        private double highQualityValue = 27.5;
 
         public string Design
         {
@@ -61,7 +61,7 @@ namespace Morgengry
         
         }
 
-        public Amulet(string itemID,Level quality,string design):base(itemID)
+        public Amulet(string itemID,Level quality,string design)
         {
             ItemId = itemID;
             Quality = quality;
@@ -73,5 +73,27 @@ namespace Morgengry
             return "ItemId: " + ItemId + ", " + "Quality: " + Quality + ", " + "Design: " + Design;
         }
 
+        public override double GetValue()
+        {
+
+            double Qual = 0;
+
+            switch (Quality)
+            {
+                case Level.low:
+                    Qual = lowQualityValue;
+                break;
+
+                case Level.medium:
+                    Qual = mediumQualityValue;
+                break;
+
+                case Level.high:
+                    Qual = highQualityValue;
+                break;
+            }
+            return Qual;
+
+        }
     }
 }

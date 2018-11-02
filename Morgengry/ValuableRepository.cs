@@ -17,7 +17,10 @@ namespace Morgengry
         }
         public IValuable GetValuable(string Id)
         {
-            return valuables.Find(x => x.Id == id);
+            IValuable fundet = null;
+
+
+            return fundet;
         }
 
         public double GetTotalValue()
@@ -25,10 +28,17 @@ namespace Morgengry
             double allValuables = 0;
             foreach (IValuable v in valuables)
             {
-                allValuables = IValuable.GetValue(v);
+                allValuables = allValuables + v.GetValue();
             }
 
             return allValuables;
         }
+
+        public int Count()
+        {
+            return valuables.Count;
+        }
+
+         
     }
 }
