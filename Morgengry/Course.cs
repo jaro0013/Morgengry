@@ -10,6 +10,7 @@ namespace Morgengry
     {
         private int durationInMinutes;
         private string name;
+        private double courseHourValue;
 
         public string Name
         {
@@ -20,6 +21,15 @@ namespace Morgengry
         public int DurationInMinutes {
             get { return durationInMinutes; }
             set { durationInMinutes = value; }
+        }
+
+        public double CourseHourValue
+        {
+            get
+            {
+                return courseHourValue;
+            }
+            set { CourseHourValue = value; }
         }
 
         public Course(string name) :

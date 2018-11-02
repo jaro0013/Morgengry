@@ -10,7 +10,7 @@ namespace Morgengry
     {
         public string ItemId { get; set; }
 
-        public Merchandise(string ItemId)
+        /*public Merchandise(string ItemId)
         {
             this.ItemId = ItemId;
         }
@@ -18,6 +18,6 @@ namespace Morgengry
         public string ToString()
         {
             return "ItemId: " + ItemId;
-        }
+        }*/
     }
 }

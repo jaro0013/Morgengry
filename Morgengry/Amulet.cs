@@ -9,10 +9,15 @@ namespace Morgengry
     public enum Level { low, medium, high };
     public class Amulet : Merchandise
     {
+        
         //string ItemID { get; set; }
         private string design;
         private Level quality;
-         public string Design
+        private double lowQualityValue;
+        private double mediumQualityValue;
+        private double highQualityValue;
+
+        public string Design
         {
             get { return design; }
             set { design = value; }
@@ -24,9 +29,23 @@ namespace Morgengry
             set { quality = value; }
         }
 
-        
+        public double LowQualityValue
+        {
+            get { return lowQualityValue; }
+            set { lowQualityValue = value; }
+        }
 
+        public double MediumQualityValue
+        {
+            get { return mediumQualityValue; }
+            set { mediumQualityValue = value; }
+        }
 
+        public double HighQualityValue
+        {
+            get { return highQualityValue; }
+            set { highQualityValue = value; }
+        }
         public Amulet(string itemID):
             this(itemID, Level.medium, "")
         {
